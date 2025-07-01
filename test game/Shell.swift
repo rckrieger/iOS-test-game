@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class Shell{
+class Shell: NSObject{
     var frontPicture : UIImage?
     var backPicture : UIImage?
     var emotion: String?
