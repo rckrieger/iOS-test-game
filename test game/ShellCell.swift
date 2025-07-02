@@ -14,6 +14,5 @@ class ShellCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
-    
+        
 }

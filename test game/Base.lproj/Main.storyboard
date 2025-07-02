@@ -17,10 +17,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="1376" height="1032"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-D1-89h">
-                                <rect key="frame" x="-1112" y="-321" width="2614" height="1804"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="hermitcrab" translatesAutoresizingMaskIntoConstraints="NO" id="77a-7H-ByP">
                                 <rect key="frame" x="20" y="187" width="450" height="789"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -33,20 +29,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Opaque clicked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZH-rc-WMN">
-                                <rect key="frame" x="63" y="886" width="119" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8LX-3a-nkl">
                                 <rect key="frame" x="568" y="452" width="736" height="524"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zC5-e8-ku7">
+                                <rect key="frame" x="568" y="452" width="756" height="524"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
-                                    <segue destination="HxO-SL-BXi" kind="embed" id="duG-8J-rJN"/>
+                                    <segue destination="KsT-BJ-TZo" kind="embed" id="S62-Nu-aW0"/>
                                 </connections>
                             </containerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="sand" translatesAutoresizingMaskIntoConstraints="NO" id="ASu-D1-89h">
+                                <rect key="frame" x="-1196" y="-349" width="2614" height="1804"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -61,15 +58,15 @@
             </objects>
             <point key="canvasLocation" x="120.78488372093022" y="3.4883720930232558"/>
         </scene>
-        <!--Grid View Controller-->
+        <!--NONFUNCTIONAL Grid View Controller-->
         <scene sceneID="kTg-R9-szD">
             <objects>
-                <viewController id="HxO-SL-BXi" userLabel="Grid View Controller" sceneMemberID="viewController">
+                <viewController id="HxO-SL-BXi" userLabel="NONFUNCTIONAL Grid View Controller" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cBv-NL-4BN" userLabel="Grid View">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="524"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1376" height="1032"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xpw-uU-nOY" customClass="ShellBoard" customModule="test_game" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="prototypes" id="Xpw-uU-nOY" customClass="ShellBoardCollectionView" customModule="test_game" customModuleProvider="target">
                                 <rect key="frame" x="-34" y="-64" width="803" height="651"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
@@ -95,6 +92,7 @@
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
                                         <connections>
                                             <outlet property="ShellPicture" destination="0Ip-IJ-iNr" id="JvL-py-TCd"/>
                                         </connections>
@@ -107,12 +105,78 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IBp-0k-oHn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="99" y="380"/>
+            <point key="canvasLocation" x="121" y="618"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="0cV-6k-PM5">
+            <objects>
+                <viewController id="KsT-BJ-TZo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m1o-pr-NNO">
+                        <rect key="frame" x="0.0" y="0.0" width="756" height="524"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="IZd-lS-Xw9">
+                                <rect key="frame" x="-16" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="pEU-fU-nS6">
+                                <rect key="frame" x="151" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="yR5-I0-Lsx">
+                                <rect key="frame" x="319" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="hog-Lc-CDZ">
+                                <rect key="frame" x="319" y="24" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="c9F-K6-sTM">
+                                <rect key="frame" x="151" y="24" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-Mv-Gi5">
+                                <rect key="frame" x="-16" y="24" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="dmx-Pf-vKM">
+                                <rect key="frame" x="319" y="329" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="2mU-eN-3BS">
+                                <rect key="frame" x="151" y="329" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-s9-4uE">
+                                <rect key="frame" x="-16" y="329" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-orange" translatesAutoresizingMaskIntoConstraints="NO" id="UCc-j0-RHn">
+                                <rect key="frame" x="496" y="178" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="Wu0-iP-ptz">
+                                <rect key="frame" x="496" y="24" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sea-shell-blue" translatesAutoresizingMaskIntoConstraints="NO" id="slv-sH-Lgf">
+                                <rect key="frame" x="496" y="329" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrd-aB-ysL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.8372093023255" y="2.9069767441860463"/>
         </scene>
     </scenes>
     <resources>
         <image name="hermitcrab" width="1024" height="1024"/>
         <image name="sand" width="2614" height="1804"/>
+        <image name="sea-shell-blue" width="500" height="476"/>
+        <image name="sea-shell-orange" width="500" height="480"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
